@@ -1,4 +1,4 @@
-def application(env, start_response):
+def app(env, start_response):
     query_string=env['QUERI_STRING']
     split_query_string=query_string.split("&")
     body=[bytes(i+'\n','ascii') for i in split_query_string]
